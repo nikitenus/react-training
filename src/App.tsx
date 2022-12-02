@@ -6,18 +6,20 @@ import {Rating} from "./components/Rating/Rating";
 function App() {
     return (
         <div>
-            <AppTitle/>
+            <PageTitle title={"This is App component"}/>
+            <PageTitle title={"My friends"}/>
             Article 1
-            <Rating value={3}/>
-            <Accordion/>
+            <Rating value={1}/>
+            <Accordion titleValue={"menu1"} collapsed={false}/>
+            <Accordion titleValue={"menu2"} collapsed={false}/>
             Article 2
             <Rating value={5}/>
         </div>
     );
 }
 
-function AppTitle() {
-    return <div>"This is App component"</div>
+function PageTitle(props: any) {
+    return <h1>{props.title}</h1>
 }
 
 
